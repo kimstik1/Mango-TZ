@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.jetbrains.kotlin.android)
     id("kotlin-kapt")
     id("com.google.dagger.hilt.android")
+    kotlin("plugin.serialization") version "2.0.0"
 }
 
 android {
@@ -85,4 +86,7 @@ dependencies {
     implementation (libs.kotlinx.coroutines.android)
     implementation (libs.kotlinx.coroutines.core)
     //Coroutine EndRegion
+
+    //Serializable
+    implementation(libs.kotlinx.serialization.json)
 }
